@@ -9,11 +9,6 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  const newArr = [];
-  arr.forEach (num => {
-    newArr.push(num + 1);
-  });
-  return newArr;
   // Solution code here...
 };
 
@@ -26,14 +21,7 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  const newArr = [];
-  arr.forEach (e => {
-    newArr.push(e + '!');
-
-  });
-  return newArr;
   // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,37 +33,25 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  const newArr = [];
-  arr.forEach (string => {
-    newArr.push(string.toUpperCase());
   // Solution code here...
-  });
-
-  return newArr;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
 Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker` that takes in an array of strings and a callback function.
+Then, write a function named `speaker` that takes in an array of strings and a callback function. 
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
+Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
   // Solution code here...
-  const newArr = [];
-  word.forEach (string => {
-    newArr.push(string.toUpperCase() + '!');
-  });
-  return newArr;
 };
 
 const speaker = (words, callback) => {
-  // Solution code here....
-  const newArr = callback(words);
-  return newArr;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
