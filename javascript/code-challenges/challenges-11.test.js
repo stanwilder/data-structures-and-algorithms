@@ -1,5 +1,8 @@
 'use strict';
 
+const { data } = require("cheerio/lib/api/attributes");
+const { InputGroup } = require("react-bootstrap");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -54,6 +57,7 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
+  return InputGroup.flat(1).reduce((a, b) => a + b, 0);
   // Solution code here...
 };
 
@@ -137,6 +141,11 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let maleAndFemale = [];
+  data.forEach(gen => gen.gender === 'male' || gen.gender === 'female' ?
+    maleAndFemale.push(gen.name) : maleAndFemale);
+  return maleAndFemale.join(' and ');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -146,6 +155,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
+  let shortest = data.sort((a,b) => a.height-b.height);
+  return shortest[0].name;
+
   // Solution code here...
 };
 
